@@ -17,6 +17,7 @@ class tool:
         if not path:return False
         try:
             subprocess.run(["git","init"])
+            subprocess.run(["git", "branch", "-M", "main"], check=True)
             subprocess.run(["git", "remote", "remove", "origin"], check=True)
             subprocess.run(["git", "remote", "add", "origin", data.remote_link], check=True)
             subprocess.run(["git", "add", "."], check=True)
