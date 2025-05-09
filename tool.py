@@ -39,6 +39,7 @@ class tool:
         path = os.path.join(data.path_local)
         if not path:return False
         try:
+            subprocess.run(["git","pull","origin","main","--allow-unrelated-histories"]) #remove o commit que nao foi puchado
             subprocess.run(["git", "branch", "-M", "main"], check=True)
             subprocess.run(["git", "add", "."], check=True)
             subprocess.run(["git", "commit", "-m", data.commit], check=True)
