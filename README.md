@@ -9,7 +9,7 @@ Este script é útil para quem cria repositórios com frequência e deseja:
 * Puxar o histórico remoto (mesmo que tenha histórias diferentes)
 * Configurar o `origin`
 * Fazer `add`, `commit` e `push` automáticos
-
+* (OBS: O Codigo foi feito para rodar em Habiente Windows nao foi testado em Sistemas Baseado em UNIX (Linux, MacOS)
 ---
 
 ## 📁 Estrutura do projeto
@@ -165,4 +165,4 @@ class tool:
 ## 📚 Licença
 
 MIT License
-(c) 2025 Seu Nome
+(c) 2025 Quitto
