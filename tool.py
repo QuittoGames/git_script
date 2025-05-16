@@ -16,6 +16,7 @@ class tool:
     def args():
         parameter = argparse.ArgumentParser(prog="git_script")
         parameter.add_argument('--push', action='store_true', help='Executa o push no repositório')
+        parameter.add_argument('--pull', action='store_true', help="Ultila O Pull para siconizar o code atual com o do Git Hub")
         return parameter.parse_args()
 
     def gitInit(data:data) -> bool:
@@ -47,3 +48,13 @@ class tool:
         except Exception as E:
             print(f"Erro Al Execultar Script De git, Erro: {E}")      
             return False  
+        
+    def gitPull():
+        path = os.path.join(data.path_local)
+        if not path:return False
+        try:
+            subprocess.run(["git","pull","origin","main"])
+        except Exception as E:
+            print(f"Erro Al Execultar Script De git, Erro: {E}")      
+            return False  
+        

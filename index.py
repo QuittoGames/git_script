@@ -30,6 +30,11 @@ def Start():
                 print("="* 30 + "git_script" + "=" * 30)
                 print("Alterações enviadas com sucesso!")
             return
+        elif args.pull:
+            if tool.gitPull(data_local):
+                print("="* 30 + "git_script" + "=" * 30)
+                print("Repositório Local Atalizado Com Suseso")
+
         if tool.gitInit(data_local):
             print("="* 30 + "git_script" + "=" * 30)
             print("Repositório configurado e alterações enviadas com sucesso!")
