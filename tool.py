@@ -26,8 +26,8 @@ class tool:
             subprocess.run(["git","init"])
             subprocess.run(["git", "branch", "-M", "main"], check=True)
             #git pull origin main --allow-unrelated-histories
-            subprocess.run(["git","pull","origin","main","--allow-unrelated-histories"]) #remove o commit que nao foi puchado
             subprocess.run(["git", "remote", "add", "origin", data.remote_link], check=True) #Adiciona A coneçao remote novamente
+            subprocess.run(["git","pull","origin","main","--allow-unrelated-histories"]) #remove o commit que nao foi puchados
             subprocess.run(["git", "add", "."], check=True)
             subprocess.run(["git", "commit", "-m", data.commit], check=True)
             subprocess.run(["git", "push", "-u", "origin", "main"], check=True)
