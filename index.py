@@ -24,7 +24,13 @@ def Start():
             Start()
             return
         
-        data_local = data(remote_link=remote_link,commit=commit)
+        brach = input("Digite a branch: ").strip()
+        if brach is None or brach == "":
+            sleep(2)
+            Start()
+            return
+    
+        data_local = data(remote_link=remote_link,commit=commit,branch=brach)
         if args.push:
             if tool.gitPush(data_local):
                 print("="* 30 + "git_script" + "=" * 30)
