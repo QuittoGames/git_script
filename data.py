@@ -5,4 +5,5 @@ import os
 class data:
     commit: str
     remote_link: str
+    branch: str
     path_local: str = os.path.abspath(__file__)
