@@ -44,7 +44,7 @@ class tool:
             subprocess.run(["git", "branch", "-M", "main"], check=True)
             subprocess.run(["git", "add", "."], check=True)
             subprocess.run(["git", "commit", "-m", data.commit], check=True)
-            subprocess.run(["git", "push", "-u", "origin", data.brach], check=True)
+            subprocess.run(["git", "push", "-u", "origin", data.branch], check=True)
         except Exception as E:
             print(f"Erro Al Execultar Script De git, Erro: {E}")      
             return False  
